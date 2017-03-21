@@ -69,6 +69,11 @@ $obj_cluster->setOption(RedisCluster::OPT_SLAVE_FAILOVER, RedisCluster::FAILOVER
 $obj_cluster->setOption(
     RedisCluster::OPT_SLAVE_FAILOVER, RedisCluster::FAILOVER_DISTRIBUTE
 );
+
+// Or you can distribute readonly commands to a random slaves
+$obj_cluster->setOption(
+    RedisCluster::OPT_SLAVE_FAILOVER, RedisCluster::FAILOVER_DISTRIBUTE_SLAVE
+);
 </pre>
 
 ## Main command loop
